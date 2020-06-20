@@ -1,0 +1,191 @@
+:root {
+    --color-btn: #3c53e4;
+    --color-ok: #35d0b8;
+    --font-g: "Poppins", sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background: var(--color-btn);
+    color: #fff;
+    font-family: var(--font-g);
+    font-size: 24px;
+    letter-spacing: 1px;
+    height: 70px;
+    padding: 0 45px 0 40px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.btn__text, .btn__text-2 {
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+}
+
+.btn__text-2 {
+    width: 0;
+}
+
+.cont-image, .cont-image-check {
+    display: inline-block;
+    position: relative;
+}
+
+.cont-image:after, .cont-image:before {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+    position: absolute;
+    top: 12px;
+    right: 100%;
+    opacity: 0;
+}
+
+.cont-image:after {
+    top: 19px;
+    width: 15px;
+}
+
+.cont-image img, .cont-image-check img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-top: -3px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.cont-image-check {
+    display: none;
+}
+
+.cont-image-check img {
+    opacity: 0;
+    transform-origin: center right;
+}
+
+.active .cont-image img {
+    animation: goMove 1s ease-in forwards;
+}
+
+.active .cont-image-check img {
+    animation: moveCheck .5s ease-in forwards;
+}
+
+.active .cont-image:after, .active .cont-image:before {
+    animation: opacityLines 0.8s ease-in forwards;
+}
+
+.active .btn__text {
+    animation: recorText .1s ease-in forwards .7s;
+}
+
+.active .btn__text-2 {
+    animation: recorText .1s ease-in forwards 1.4s reverse;
+}
+
+.btn.active {
+    animation: transformCircle 1s ease-in forwards .5s;
+}
+
+@keyframes goMove {
+    0% {
+        transform: translate(0,0) scale(1,1);
+    }
+    30% {
+        transform: translate(-15px,0) scale(1,0.8);
+    }
+    100% {
+        transform: translate(400px,0) scale(0.2,0.2);
+    }
+}
+
+@keyframes moveCheck {
+    0% {
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+    20% {
+        opacity: 1;
+        transform: rotate(0);
+        margin-right: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 15px;
+    }
+}
+
+@keyframes opacityLines {
+    0% {
+        transform: translate(20px,0);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-20px,0);
+    }
+    80% {
+        opacity: 0;
+        transform: translate(-20px,0);
+    }
+}
+
+@keyframes recorText {
+    0% {
+        width: calc(100% - 22px);
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes transformCircle {
+    0% {
+        width: 200px;
+        padding: 0 45px;
+    }
+    25% {
+        width: 70px;
+        padding: 0;
+    }
+    75% {
+        width: 70px;
+        padding: 0;
+        background-color: var(--color-btn);
+    }
+    100% {
+        background-color: var(--color-ok);
+        width: 200px;
+        padding: 0 45px;
+    }
+}
