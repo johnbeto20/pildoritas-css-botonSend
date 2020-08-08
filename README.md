@@ -11,17 +11,17 @@ Este boton fue diseñado por
 
 2. Luego le aplico los estilos al gusto.
 
-![imagen boton](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-BotonSend/master/img_Readme/btn-enviar.jpg)
+![imagen boton](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-botonSend/master/img_Readme/btn-enviar.jpg)
 
 3. Conseguiremos dos imagenes (en png o SVG) donde mostraremos el icono principal y el icono final.
 
 Imagen principal
 
-![imagen inicial](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-BotonSend/master/img_Readme/ico-send.jpg)
+![imagen inicial](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-botonSend/master/img_Readme/ico-send.jpg)
 
 Imagen final
 
-![imagen final](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-BotonSend/master/img_Readme/ico-done.jpg)
+![imagen final](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-botonSend/master/img_Readme/ico-done.jpg)
 
 4. tenemos que tener en cuenta que la estructura de nuestro botón podría cambiar, entonces maquetamos acorde a lo que queremos controlar, con una separación, 'esa es la clave'.
 
@@ -39,7 +39,7 @@ Imagen final
 ````
 5. Ajustamos por estilos la parte principal, la imagen que lo contiene la clase: **"class="cont-image"** y el texto que lo contiente la siguiente clase: **"class="btn__text"**, así tendríamos algo así:
 
-![imagen enviar final](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-BotonSend/master/img_Readme/boton-enviar-finish.jpg)
+![imagen enviar final](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-botonSend/master/img_Readme/boton-enviar-finish.jpg)
 
 ## Animar el icono del avioncito.
 
@@ -59,7 +59,7 @@ Para esta parte hay un detalle coqueto donde utilicé un **:after** y un **:befo
 }
 ````
 quedaría algo así, pero le agregamos una **opacidad** de **0** para no mostrarlo al principio.
-![imagen lineas del avion](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-BotonSend/master/img_Readme/image-avion-con-lineas.jpg)
+![imagen lineas del avion](https://raw.githubusercontent.com/johnbeto20/pildoritas-css-botonSend/master/img_Readme/image-avion-con-lineas.jpg)
 
 Aparte agregamos las animaciónes respectivas, esto ya sería como queremos animarlo (En el repositorio estará la base de animación inicial):
 
